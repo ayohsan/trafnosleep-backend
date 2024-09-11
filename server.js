@@ -3,14 +3,18 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const port = 3001;
-const sendMail = require('./backend/send-mail'); // Importer le fichier send_mail.js
+const sendMail = require('./send-mail'); // Importer le fichier send_mail.js
 
 // Middleware pour parser les requêtes POST
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Servir des fichiers statiques (HTML, CSS, JS)
-app.use(express.static(__dirname, '/www/html',));
+//app.use(express.static(__dirname, 'public',));
+
+//app.get('*', (req, res) => {
+ // res.send('Backend is running');
+//});
 
 // Route pour le formulaire de contact
 app.post('/send-mail', (req, res) => {
@@ -22,11 +26,11 @@ app.post('/send-mail', (req, res) => {
       return res.status(500).send('Erreur lors de l\'envoi de l\'email : ' + error.message);
     }
     // Rediriger vers la page de succès après envoi
-    res.redirect('www/html/success.html');
+    res.redirect('/success.html');
   });
 });
 
 // Démarrage du serveur
-app.listen(port, '0.0.0.0',() => {
+app.listen(port, '127.0.0.1',() => {
   console.log(`Serveur à l'écoute sur http://localhost:${port}`);
 });

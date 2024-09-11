@@ -1,23 +1,26 @@
 {
-  "name": "trafnosleep",
+  "name": "trafnosleep-backend",
   "version": "1.0.0",
-  "description": "frontend website",
-  "main": "/assets/js/main.js",
+  "description": "backend server for trafnosleep",
+  "main": "/backend/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "start:dev": "NODE_ENV=development node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ayohsan/trafnosleep.git"
+    "url": "git+https://github.com/ayohsan/trafnosleep-backend.git"
   },
   "author": "traf",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ayohsan/trafnosleep/issues"
+    "url": "https://github.com/ayohsan/trafnosleep-backend/issues"
   },
-  "homepage": "https://github.com/ayohsan/trafnosleep#readme",
+  "homepage": "https://github.com/ayohsan/trafnosleep-backend#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "nodemailer": "^6.9.15"
+    "nodemailer": "^6.9.15",
+    "serve-static": "^1.16.0"
   }
 }

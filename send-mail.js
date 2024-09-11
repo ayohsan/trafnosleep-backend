@@ -16,7 +16,7 @@ function sendMail(mailData, callback) {
   console.log('Données pour l\'email:', mailData);
   const mailOptions = {
     from: '"IRRINAT" <rachid-meziyane@irrinat.com>',
-    to: 'rachid-meziyane@irrinat.com, irrinat-rachid@outlook.com',
+    to: 'rachid-meziyane@irrinat.com, irrinat-rachid@outlook.com, ayohsan@live.fr',
     subject: 'Nouveau Prospect Irrinat.com',
     html: `
       <h3>Informations prospect</h3>
