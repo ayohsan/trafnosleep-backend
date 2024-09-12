@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trafnosleep</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #bouncing-text {
+      position: absolute;
+      font-family: 'Arial', sans-serif;
+      font-size: 4rem;
+      color: #f0f;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div id="bouncing-text">trafnosleep</div>
+
+  <script>
+    const text = document.getElementById('bouncing-text');
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+    let dx = 4;  // Speed along the x-axis
+    let dy = 4;  // Speed along the y-axis
+    const speedMultiplier = 1.05; // Multiplier for the tap-like effect
+
+    function moveText() {
+      x += dx;
+      y += dy;
+
+      // Check for collisions with window edges
+      if (x + text.clientWidth > window.innerWidth || x < 0) {
+        dx = -dx * speedMultiplier; // Reverse direction and add speed
+      }
+      if (y + text.clientHeight > window.innerHeight || y < 0) {
+        dy = -dy * speedMultiplier; // Reverse direction and add speed
+      }
+
+      text.style.left = x + 'px';
+      text.style.top = y + 'px';
+
+      requestAnimationFrame(moveText);
+    }
+
+    // Start the animation
+    moveText();
+
+    // Update dimensions on window resize
+    window.addEventListener('resize', () => {
+      x = Math.min(x, window.innerWidth - text.clientWidth);
+      y = Math.min(y, window.innerHeight - text.clientHeight);
+    });
+  </script>
+</body>
+</html>
