@@ -10,11 +10,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Servir des fichiers statiques (HTML, CSS, JS)
-//app.use(express.static(__dirname, 'public',));
+app.use(express.static(path.join(__dirname, 'public')));
 
-//app.get('*', (req, res) => {
- // res.send('Backend is running');
-//});
+app.get('*', (req, res) => {
+ res.send('Backend is running');
+});
 
 // Route pour le formulaire de contact
 app.post('/send-mail', (req, res) => {
