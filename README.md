@@ -11,8 +11,8 @@ Avant de lancer le projet, assurez-vous d'avoir installé :
 ## Installation
 1. Clonez le projet :
    ``` bash
-   git clone https://github.com/ayohsan/trafnosleep-backend.git
-   cd trafnosleep-backend
+   git clone https://github.com/ayohsan/website-backend.git
+   cd website-backend
    ```
 
 2. Installez les dépendances :
