@@ -38,19 +38,6 @@ Avant de lancer le projet, assurez-vous d'avoir installé :
    - Le script `send-mail.js` est utilisé pour envoyer des emails.
    - Modifiez-le selon vos besoins (expéditeur, destinataire, contenu, etc.).
 
-## Structure du projet
-```
-📦 backend-server
-├── 📂 node_modules  # Dépendances installées
-├── 📂 public        # Dossier public (si nécessaire)
-├── 📄 .env.local    # Configuration pour l'environnement local
-├── 📄 .env.production # Configuration pour l'environnement de production
-├── 📄 package.json  # Fichier de configuration Node.js
-├── 📄 server.js     # Serveur principal
-├── 📄 send-mail.js  # Script d'envoi d'emails
-└── 📄 README.md     # Documentation du projet
-```
-
 ## Contribution
 Les contributions sont les bienvenues !
 - Forkez le projet
