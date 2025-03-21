@@ -1,4 +1,4 @@
-# Backend Server with Email Sending
+# Backend Server with Email Sending 📧
 
 ## Description 📝
 Ce projet est un serveur backend simple qui permet d'envoyer des emails via une API. Il utilise Node.js avec Express et un script dédié à l'envoi d'emails.
